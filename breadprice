@@ -1,0 +1,19 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data = {
+    "Year": [2000, 2005, 2010, 2015, 2020, 2023],
+    "Price": [1.00, 1.50, 2.00, 2.50, 3.00, 3.50]
+}
+
+df = pd.DataFrame(data)
+
+plt.figure(figsize=(10, 5))
+plt.plot(df["Year"], df["Price"], marker="o", linestyle="-", color="b")
+
+plt.xlabel("Year")
+plt.ylabel("Average Price of Bread (USD)")
+plt.title("Average Price of Bread Over Time")
+plt.grid(True)
+
+plt.show()
